@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Latin Food Delivery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" sizes="64x64" href="Imagenes/favicon.ico" />
+</head>
+
+<body>
+  <div class="container-fluid g-0">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-auto px-auto m-0 p-0" href="Index.html">
+          <img src="Imagenes/favicon.png" class="m-3" height="90px" width="220px" />
+        </a>
+        <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto mx-auto">
+            <li class="nav-item">
+              <a class="nav-item">
+                <div id="identifi">
+                  <button type="button" class="btn btn-warning mx-5" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <a class="navbar-brand text-dark px-3 mx-auto">Identifícate</a>
+                  </button>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Registrarse
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <h6>
+                          Introduce tus datos para completar el registro
+                        </h6>
+                        <form id="formulario" class="row g-3">
+                          <div class="col-md-6">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input id="nombre" type="text" class="form-control" required />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="validationDefault02" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="validationDefault02" required />
+                          </div>
+                          <div class="col-md-12">
+                            <label for="validationDefaultUsername" class="form-label">Nombre de usuario</label>
+                            <div class="input-group">
+                              <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                              <input type="text" class="form-control" id="validationDefaultUsername"
+                                aria-describedby="inputGroupPrepend2" required />
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <label for="validationDefault03" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="validationDefault03" required />
+                          </div>
+                          <div class="col-md-12">
+                            <label for="validationDefault04" class="form-label">Sexo</label>
+                            <select class="form-select" id="validationDefault04" required>
+                              <option selected disabled value="">
+                                Elige...
+                              </option>
+                              <option>Masculino</option>
+                              <option>Femenino</option>
+                              <option>Otro</option>
+                            </select>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required />
+                              <label class="form-check-label" for="invalidCheck3">
+                                Tengo 18 años o más
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
+                              <label class="form-check-label" for="invalidCheck2">
+                                Acepta los términos y condiciones
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                              Cerrar
+                            </button>
+                            <button class="btn bg-warning" type="submit">
+                              Enviar
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-5 text-dark" href="#productos">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-5 text-dark" href="#ofertas">Promociones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-5 text-dark" href="#restaurantesAfiliados">Restaurantes Afiliados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-dark" href="#Contacto">Contáctenos</a>
+            </li>
+          </ul>
+          <div class="btn-group px-lg-5" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-light btn-outline-dark dropdown-toggle"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="logo float-start" src="Imagenes/america-del-sur.png" />
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/mexico.png" />México</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/argentina.png" />Argentina
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/chile.png" />Chile
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/panama.png" />Panamá</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/puerto-rico.png" />Puerto Rico
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/cuba.png" />Cuba</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/colombia.png" />Colombia
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/republica-dominicana.png" />República Dominicana</a>
+              </li>
+              <li>
+                <a class="dropdown-item">
+                  <img class="logo mx-3" src="Imagenes/venezuela.png" />Venezuela
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/brasil.png" />Brasil</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/paraguay.png" />Paraguay
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/uruguay.png" />Uruguay</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/costa-rica.png" />Costa
+                  Rica
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/guatemala.png" />Guatemala</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/peru.png" />Perú
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/honduras.png" />Honduras</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/bolivia.png" />Bolivia
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/nicaragua.png" />Nicaragua</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/ecuador.png" />Ecuador
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#productos">
+                  <img class="logo mx-3" src="Imagenes/el-salvador.png" />El
+                  Salvador</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex">
+            <a href="https://es-es.facebook.com/"><img class="logo mx-3"
+                src="Imagenes/icons8-facebook-nuevo-50.png" /></a>
+            <a href="https://www.instagram.com/"><img class="logo mx-3" src="Imagenes/icons8-instagram-50.png" /></a>
+            <a href="https://twitter.com/?lang=es"><img class="logo mx-3" src="Imagenes/icons8-twitter-50.png" /></a>
+          </div>
+          <div class="d-flex float-end p-3">
+            <button type="button" class="btn btn-warning position-relative">
+              <img class="logo mx-2" src="Imagenes/carrito.png" />
+              <span class="mx-2">0,00€</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide g-0" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video class="img-fluid d-block w-100" autoplay loop muted>
+              <source src="Imagenes/tacosVideo.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="img-fluid d-block w-100" autoplay loop muted>
+              <source src="Imagenes/VideodeProductoGastronomico.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="img-fluid d-block w-100" autoplay loop muted>
+              <source src="Imagenes/VideoDelivery.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div id="ofertas" class="container-fluid backgroundOfertas">
+      <div class="row justify-content-center">
+        <h1 class="fs-1 fw-bolder text-white texto m-5 mb-5">Promociones</h1>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-6 my-3">
+          <div class="position-relative">
+            <img src="Imagenes/50.png" alt="Imagen" class="img-fluid">
+            <button class="btn btn-warning position-absolute bottom-0 end-0 m-3">Más Información</button>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 mb-6 my-3">
+          <div class="position-relative">
+            <img src="Imagenes/familiar.png" alt="Imagen" class="img-fluid">
+            <button class="btn btn-warning position-absolute bottom-0 end-0 m-3">Más Información</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-6 my-3">
+          <div class="position-relative">
+            <img src="Imagenes/Bebidas.png" alt="Imagen" class="img-fluid">
+            <button class="btn btn-warning position-absolute bottom-0 end-0 m-3">Más Información</button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-6 my-3">
+          <div class="position-relative">
+            <img src="Imagenes/pareja.png" alt="Imagen" class="img-fluid">
+            <button class="btn btn-warning position-absolute bottom-0 end-0 m-3">Más Información</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="restaurantesAfiliados" class="container-fluid my-5 py-5" style="background-color: rgb(221, 217, 217)">
+    <h1 class="texto mb-5">Restaurantes Afiliados</h1>
+    <div id="carouselExampleIndicators" class="carousel slide g-0" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/taco_bell_logo.jpg" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Taco Bell</h5>
+                    <p class="card-text">
+                      Taco Bell es una cadena de restaurantes de comida rápida, especializada en cocina Tex-Mex.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/rancho.jpg" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">EL Rancho</h5>
+                    <p class="card-text">
+                      Restaurante en la ciudad de Écija, especialista en cocina mexicana de calidad, con una amplia y variada carta están presentes los mejores platos de la cocina TexMex.
+                    </p>
+                    <small class="text-muted">Av. del Genil, 6, 41400 Écija, Sevilla</small>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/CANTINA_MEXICANA-61-X4-1024x683.jpg" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">La Cantina Mexicana</h5>
+                    <p class="card-text">
+                      Restaurante de cocina mexicana con decoración tradicional, donde se sirven platos pequeños, cerveza y margaritas.
+                    </p>
+                    <small class="text-muted">C. Francos, 14, 41004 Sevilla</small>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/milongas.png" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Milonga´s</h5>
+                    <p class="card-text">
+                      Milongas, asador de carnes a la brasa, restaurante argentino de carnes a la brasas. 
+                    </p>
+                    <small class="text-muted">C. Luis de Morales, 32, 41004 Sevilla</small>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/malambos.png" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Restaurante Malambo's</h5>
+                    <p class="card-text">
+                      Asador informal, especializado en ternera argentina a la parrilla de carbón, con tapas y cerveza artesanal.
+                    </p>
+                    <small class="text-muted">Calle Dr. Pedro Vallina, 11, 41008 Sevilla</small>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/malvon.jpg" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Empanadas Malvón</h5>
+                    <p class="card-text">
+                      Las mejores empanadas artesanales con ingredientes de primera calidad.
+                    </p>
+                    <small class="text-muted">C. San Jacinto, 5, 41010 Sevilla</small>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/nortechico.jpg" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Restaurante Norte Chico</h5>
+                    <p class="card-text">
+                      Restaurante de comida típica peruana, totalmente casera y muy sabrosa.
+                    </p>
+                    <small class="text-muted">Av. de Kansas City, 44, 41007 Sevilla</small>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/asador-san-lazaro-1-1024x576.jpg" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Asador San Lazaro</h5>
+                    <p class="card-text">
+                      Comida sudamericana casera, la mejor de Sevilla.
+                    </p>
+                    <small class="text-muted">Av. San Lázaro, s/n, 41009 Sevilla</small>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Imagenes/leños.jpg" class="card-img-top imagenRestaurante" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Restaurante Colombiano Leños Asador</h5>
+                    <p class="card-text">
+                      Restaurante de comida típica colombiana, totalmente casera y muy sabrosa.
+                    </p>
+                    <small class="text-muted">Pl. la Caña, 52, 41007 Sevilla</small>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ComentariosModal">
+                      Ver Productos
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="productos" class="container-fluid backgroundOfertas">  
+    <h1 class="fs-1 fw-bolder text-white texto my-5 mb-5">Productos</h1>
+    <div class="container mx-auto mt-4">    
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="width: 19rem;">
+            <img src="Imagenes/taco.png" class="card-img-top imagenComida" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Taco Con Queso</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Taco Bell</h6>
+              <p class="card-text">Tacos de carne con queso fundido y verdura.</p>
+                <button href="#" class="btn btn-warning">Información</button>
+                <button href="#" class="btn btn-warning">Pedir</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="width: 19rem;height:24rem;">
+            <img src="Imagenes/nachos.png" class="card-img-top imagenComida" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Nachos</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Rancho</h6>
+              <p class="card-text">Nachos con guacamole, perfectos para compartir.</p>
+                <button href="#" class="btn btn-warning">Información</button>
+                <button href="#" class="btn btn-warning">Pedir</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="width: 19rem;height:24rem;">
+            <img src="Imagenes/guacamole.png" class="card-img-top imagenComida" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Guacamole</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Rancho</h6>
+              <p class="card-text">Guacamole casero perfecto para dipear.</p>
+                <button href="#" class="btn btn-warning">Información</button>
+                <button href="#" class="btn btn-warning">Pedir</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="width: 19rem;height:24rem;">
+            <img src="Imagenes/tacoChili.png" class="card-img-top imagenComida" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mini Tacos Con Chili</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Taco Bell</h6>
+              <p class="card-text">Mini tacos con chili muy muy picante.</p>
+                <button href="#" class="btn btn-warning">Información</button>
+                <button href="#" class="btn btn-warning">Pedir</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="width: 19rem;height:24rem;">
+            <img src="Imagenes/quesadillas.png" class="card-img-top imagenComida" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Quesadillas</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Rancho</h6>
+              <p class="card-text">Quesadillas para los amantes del queso.</p>
+                <button href="#" class="btn btn-warning">Información</button>
+                <button href="#" class="btn btn-warning">Pedir</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="width: 19rem;height:24rem;">
+            <img src="Imagenes/burrito.png" class="card-img-top imagenComida" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Burrito Mexicano</h5>
+              <h6 class="card-subtitle mb-2 text-muted">La Cantina Mexicana</h6>
+              <p class="card-text">Burrito mexicano con carne y verduras.</p>
+                <button href="#" class="btn btn-warning">Información</button>
+                <button href="#" class="btn btn-warning">Pedir</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card" style="width: 19rem;height:24rem;">
+            <img src="Imagenes/burguer.png" class="card-img-top imagenComida" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Hamburguesa Mexicana</h5>
+              <h6 class="card-subtitle mb-2 text-muted">La Cantina Mexicana</h6>
+              <p class="card-text">Hamburguesa de ternera con chili y queso.</p>
+                <button href="#" class="btn btn-warning">Información</button>
+                <button href="#" class="btn btn-warning">Pedir</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="width: 19rem;height:24rem;">
+            <img src="Imagenes/Enchilada.png" class="card-img-top imagenComida" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Enchilada</h5>
+              <h6 class="card-subtitle mb-2 text-muted">La Cantina Mexicana</h6>
+              <p class="card-text">Enchilada tradicional mexicana.</p>
+                <button href="#" class="btn btn-warning">Información</button>
+                <button href="#" class="btn btn-warning">Pedir</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="d-none d-sm-block py-5" aria-label="Page navigation example">
+      <ul class="pagination mx-auto justify-content-center">
+        <li class="page-item"><a class="page-link" href="#productos"><<</a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/argentina.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/mexico.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/chile.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/panama.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/puerto-rico.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/cuba.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/colombia.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/republica-dominicana.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/venezuela.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/brasil.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/paraguay.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/uruguay.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/costa-rica.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/guatemala.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/peru.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/honduras.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/bolivia.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/nicaragua.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/ecuador.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos"><img class="logoMini" src="Imagenes/el-salvador.png" /></a></li>
+        <li class="page-item"><a class="page-link" href="#productos">>></a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="Contacto" class="container-fluid my-5 py-5" style="background-color: white">
+    <form class="row g-3">
+      <h1 class="texto mb-5">Formulario de Contacto</h1>
+      <div class="col-md-6">
+        <label for="validationUsername" class="form-label">Nombre de usuario</label>
+        <div class="input-group">
+          <span class="input-group-text" id="inputGroup">@</span>
+          <input type="text" class="form-control" id="validationUsername" aria-describedby="inputGroup" required />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationEMAIL" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="validationEMAIL" required />
+      </div>
+      <div class="col-md-6">
+        <label for="validationCITY" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="validationCITY" required />
+      </div>
+      <div class="col-md-3">
+        <label for="validationPROV" class="form-label">Provincia</label>
+        <select class="form-select" id="validationPROV" required>
+          <option selected disabled value="">Elige...</option>
+          <option value="Álava/Araba">Álava/Araba</option>
+          <option value="Albacete">Albacete</option>
+          <option value="Alicante">Alicante</option>
+          <option value="Almería">Almería</option>
+          <option value="Asturias">Asturias</option>
+          <option value="Ávila">Ávila</option>
+          <option value="Badajoz">Badajoz</option>
+          <option value="Baleares">Baleares</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Burgos">Burgos</option>
+          <option value="Cáceres">Cáceres</option>
+          <option value="Cádiz">Cádiz</option>
+          <option value="Cantabria">Cantabria</option>
+          <option value="Castellón">Castellón</option>
+          <option value="Ceuta">Ceuta</option>
+          <option value="Ciudad Real">Ciudad Real</option>
+          <option value="Córdoba">Córdoba</option>
+          <option value="Cuenca">Cuenca</option>
+          <option value="Gerona/Girona">Gerona/Girona</option>
+          <option value="Granada">Granada</option>
+          <option value="Guadalajara">Guadalajara</option>
+          <option value="Guipúzcoa/Gipuzkoa">Guipúzcoa/Gipuzkoa</option>
+          <option value="Huelva">Huelva</option>
+          <option value="Huesca">Huesca</option>
+          <option value="Jaén">Jaén</option>
+          <option value="La Coruña/A Coruña">La Coruña/A Coruña</option>
+          <option value="La Rioja">La Rioja</option>
+          <option value="Las Palmas">Las Palmas</option>
+          <option value="León">León</option>
+          <option value="Lérida/Lleida">Lérida/Lleida</option>
+          <option value="Lugo">Lugo</option>
+          <option value="Madrid">Madrid</option>
+          <option value="Málaga">Málaga</option>
+          <option value="Melilla">Melilla</option>
+          <option value="Murcia">Murcia</option>
+          <option value="Navarra">Navarra</option>
+          <option value="Orense/Ourense">Orense/Ourense</option>
+          <option value="Palencia">Palencia</option>
+          <option value="Pontevedra">Pontevedra</option>
+          <option value="Salamanca">Salamanca</option>
+          <option value="Segovia">Segovia</option>
+          <option value="Sevilla">Sevilla</option>
+          <option value="Soria">Soria</option>
+          <option value="Tarragona">Tarragona</option>
+          <option value="Tenerife">Tenerife</option>
+          <option value="Teruel">Teruel</option>
+          <option value="Toledo">Toledo</option>
+          <option value="Valencia">Valencia</option>
+          <option value="Valladolid">Valladolid</option>
+          <option value="Vizcaya/Bizkaia">Vizcaya/Bizkaia</option>
+          <option value="Zamora">Zamora</option>
+          <option value="Zaragoza">Zaragoza</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="CP" class="form-label">Código postal</label>
+        <input type="text" class="form-control" id="CP" required />
+      </div>
+      <div class="col-md-12">
+        <textarea class="form-control" id="validationTextarea" placeholder="Escribe Aquí..." required></textarea>
+        <div id="validationTextareaFeedback" class="invalid-feedback">
+          Por favor ingresa un mensaje en el área de texto.
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn bg-warning" type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+  <div class="container-fluid my-5 py-5 fondoAzul">
+    <h1 class="texto mb-5" style="color: white">Estamos Aquí</h1>
+    <div id="map-container-google-1" class="z-depth-1-half map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d50724.31444442145!2d-6.012081841264932!3d37.383454790537435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scomida%20sudamericana!5e0!3m2!1ses!2ses!4v1678651010668!5m2!1ses!2ses"
+        frameborder="0" style="border: 0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-3 mb-3">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#productos" class="nav-link p-0 text-muted">Productos</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#ofertas" class="nav-link p-0 text-muted">Promociones</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#restaurantesAfiliados" class="nav-link p-0 text-muted">Restaurantes Afiliados</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#Contacto" class="nav-link p-0 text-muted">Contáctenos</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 mb-3">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="https://es-es.facebook.com/"><img class="logo mx-3"
+                  src="Imagenes//icons8-facebook-nuevo-50.png" /></a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="https://www.instagram.com/"><img class="logo mx-3" src="Imagenes/icons8-instagram-50.png" /></a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="https://twitter.com/?lang=es"><img class="logo mx-3" src="Imagenes/icons8-twitter-50.png" /></a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="https://www.youtube.com/"><img class="logo mx-3" src="Imagenes/icons8-youtube-play-50.png" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <a class="mx-auto px-auto" href="Index.html">
+              <img src="Imagenes/favicon.png" height="90px" width="220px" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2023 Latin Food Delivery. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
